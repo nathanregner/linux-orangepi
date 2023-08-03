@@ -2316,7 +2316,7 @@ endif
 
 ########### HAL_RTL8822C #################################
 ifeq ($(CONFIG_RTL8822C), y)
-include $(TopDIR)/drivers/net/wireless/rtl88x2cs/rtl8822c.mk
+include $(src)/rtl8822c.mk
 EXTRA_CFLAGS += -DCONFIG_RTW_IOCTL_SET_COUNTRY
 endif
 
