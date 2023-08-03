@@ -3,7 +3,7 @@
 ccflags-$(CONFIG_USB_MTU3_DEBUG)	+= -DDEBUG
 
 # define_trace.h needs to know how to find our header
-CFLAGS_mtu3_trace.o	:= -I$(src)
+CFLAGS_mtu3_trace.o	:= -I$(srctree)/$(src)
 
 obj-$(CONFIG_USB_MTU3)	+= mtu3.o
 

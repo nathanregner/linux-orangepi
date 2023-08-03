@@ -7,7 +7,7 @@ spufs-y += switch.o fault.o lscsa_alloc.o
 spufs-$(CONFIG_COREDUMP) += coredump.o
 
 # magic for the trace events
-CFLAGS_sched.o := -I$(src)
+CFLAGS_sched.o := -I$(srctree)/$(src)
 
 # Rules to build switch.o with the help of SPU tool chain
 SPU_CROSS	:= spu-

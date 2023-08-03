@@ -82,7 +82,7 @@ TRACE_CUSTOM_EVENT(sched_waking,
 
 /*
  * It is required that the Makefile includes:
- *    CFLAGS_<c_file>.o := -I$(src)
+ *    CFLAGS_<c_file>.o := -I$(srctree)/$(src)
  */
 #undef TRACE_INCLUDE_PATH
 #undef TRACE_INCLUDE_FILE

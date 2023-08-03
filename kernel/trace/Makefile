@@ -35,10 +35,10 @@ endif
 # code and produce random code coverage.
 KCOV_INSTRUMENT_trace_preemptirq.o := n
 
-CFLAGS_bpf_trace.o := -I$(src)
+CFLAGS_bpf_trace.o := -I$(srctree)/$(src)
 
-CFLAGS_trace_benchmark.o := -I$(src)
-CFLAGS_trace_events_filter.o := -I$(src)
+CFLAGS_trace_benchmark.o := -I$(srctree)/$(src)
+CFLAGS_trace_events_filter.o := -I$(srctree)/$(src)
 
 obj-$(CONFIG_TRACE_CLOCK) += trace_clock.o
 

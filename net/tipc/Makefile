@@ -11,7 +11,7 @@ tipc-y	+= addr.o bcast.o bearer.o \
 	   netlink.o netlink_compat.o node.o socket.o eth_media.o \
 	   topsrv.o group.o trace.o
 
-CFLAGS_trace.o += -I$(src)
+CFLAGS_trace.o += -I$(srctree)/$(src)
 
 tipc-$(CONFIG_TIPC_MEDIA_UDP)	+= udp_media.o
 tipc-$(CONFIG_TIPC_MEDIA_IB)	+= ib_media.o

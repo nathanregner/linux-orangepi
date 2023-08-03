@@ -2,7 +2,7 @@
 # Copyright (C) 2019-2022 Maximilian Luz <luzmaximilian@gmail.com>
 
 # For include/trace/define_trace.h to include trace.h
-CFLAGS_core.o = -I$(src)
+CFLAGS_core.o = -I$(srctree)/$(src)
 
 obj-$(CONFIG_SURFACE_AGGREGATOR) += surface_aggregator.o
 

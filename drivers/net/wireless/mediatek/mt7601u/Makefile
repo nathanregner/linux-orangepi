@@ -5,4 +5,4 @@ mt7601u-objs	= \
 	usb.o init.o main.o mcu.o trace.o dma.o core.o eeprom.o phy.o \
 	mac.o util.o debugfs.o tx.o
 
-CFLAGS_trace.o := -I$(src)
+CFLAGS_trace.o := -I$(srctree)/$(src)

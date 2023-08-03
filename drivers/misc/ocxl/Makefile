@@ -7,6 +7,6 @@ ocxl-y				+= core.o
 obj-$(CONFIG_OCXL)		+= ocxl.o
 
 # For tracepoints to include our trace.h from tracepoint infrastructure:
-CFLAGS_trace.o := -I$(src)
+CFLAGS_trace.o := -I$(srctree)/$(src)
 
 # ccflags-y += -DDEBUG

@@ -33,4 +33,4 @@ obj-$(CONFIG_ATH11K_PCI) += ath11k_pci.o
 ath11k_pci-y += mhi.o pci.o
 
 # for tracing framework to find trace.h
-CFLAGS_trace.o := -I$(src)
+CFLAGS_trace.o := -I$(srctree)/$(src)

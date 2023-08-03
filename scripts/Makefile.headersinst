@@ -18,7 +18,7 @@ src := $(srctree)/$(obj)
 gen := $(objtree)/$(subst include/,include/generated/,$(obj))
 dst := usr/include
 
--include $(src)/Kbuild
+-include $(srctree)/$(src)/Kbuild
 
 # $(filter %/, ...) is a workaround for GNU Make <= 4.2.1, where
 # $(wildcard $(src)/*/) contains not only directories but also regular files.

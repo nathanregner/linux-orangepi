@@ -6,7 +6,7 @@ rnbd-client-y := rnbd-clt.o \
 		  rnbd-clt-sysfs.o \
 		  rnbd-common.o
 
-CFLAGS_rnbd-srv-trace.o = -I$(src)
+CFLAGS_rnbd-srv-trace.o = -I$(srctree)/$(src)
 
 rnbd-server-y := rnbd-common.o \
 		  rnbd-srv.o \

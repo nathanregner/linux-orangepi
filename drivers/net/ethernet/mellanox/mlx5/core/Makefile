@@ -4,7 +4,7 @@
 # (ConnectX series) core & netdev driver
 #
 
-subdir-ccflags-y += -I$(src)
+subdir-ccflags-y += -I$(srctree)/$(src)
 
 obj-$(CONFIG_MLX5_CORE) += mlx5_core.o
 

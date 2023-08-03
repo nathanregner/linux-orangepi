@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
-include $(src)/common/mmu/Makefile
+include $(srctree)/$(src)/common/mmu/Makefile
 habanalabs-y += $(HL_COMMON_MMU_FILES)
 
-include $(src)/common/pci/Makefile
+include $(srctree)/$(src)/common/pci/Makefile
 habanalabs-y += $(HL_COMMON_PCI_FILES)
 
 HL_COMMON_FILES := common/habanalabs_drv.o common/device.o common/context.o \

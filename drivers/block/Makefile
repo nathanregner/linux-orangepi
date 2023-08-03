@@ -7,7 +7,7 @@
 # 
 
 # needed for trace events
-ccflags-y				+= -I$(src)
+ccflags-y				+= -I$(srctree)/$(src)
 
 obj-$(CONFIG_MAC_FLOPPY)	+= swim3.o
 obj-$(CONFIG_BLK_DEV_SWIM)	+= swim_mod.o

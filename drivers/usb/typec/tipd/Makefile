@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: GPL-2.0
-CFLAGS_trace.o			:= -I$(src)
+CFLAGS_trace.o			:= -I$(srctree)/$(src)
 
 obj-$(CONFIG_TYPEC_TPS6598X)	+= tps6598x.o
 tps6598x-y			:= core.o

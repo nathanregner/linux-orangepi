@@ -17,7 +17,7 @@ export dtbinst_root ?= $(obj)
 
 include include/config/auto.conf
 include $(srctree)/scripts/Kbuild.include
-include $(src)/Makefile
+include $(srctree)/$(src)/Makefile
 
 dtbinst-files	:= $(sort $(dtb-y) $(if $(CONFIG_OF_ALL_DTBS), $(dtb-)))
 dtboinst-files	:= $(dtbo-y)

@@ -5,7 +5,7 @@
 
 obj-$(CONFIG_L2TP) += l2tp_core.o
 
-CFLAGS_l2tp_core.o += -I$(src)
+CFLAGS_l2tp_core.o += -I$(srctree)/$(src)
 
 # Build l2tp as modules if L2TP is M
 obj-$(subst y,$(CONFIG_L2TP),$(CONFIG_PPPOL2TP)) += l2tp_ppp.o

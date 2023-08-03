@@ -7,7 +7,7 @@
 
 obj-$(CONFIG_SCSI_PM8001) += pm80xx.o
 
-CFLAGS_pm80xx_tracepoints.o := -I$(src)
+CFLAGS_pm80xx_tracepoints.o := -I$(srctree)/$(src)
 
 pm80xx-y += pm8001_init.o \
 		pm8001_sas.o  \

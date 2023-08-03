@@ -51,4 +51,4 @@ obj-$(CONFIG_ATH6KL_USB) += ath6kl_usb.o
 ath6kl_usb-y += usb.o
 
 # for tracing framework to find trace.h
-CFLAGS_trace.o := -I$(src)
+CFLAGS_trace.o := -I$(srctree)/$(src)

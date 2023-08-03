@@ -6,8 +6,8 @@
 #
 #
 
-ccflags-y += -I$(src)
-subdir-ccflags-y += -I$(src)
+ccflags-y += -I$(srctree)/$(src)
+subdir-ccflags-y += -I$(srctree)/$(src)
 
 obj-$(CONFIG_IAVF) += iavf.o
 

@@ -26,7 +26,7 @@ mei-txe-objs := pci-txe.o
 mei-txe-objs += hw-txe.o
 
 mei-$(CONFIG_EVENT_TRACING) += mei-trace.o
-CFLAGS_mei-trace.o = -I$(src)
+CFLAGS_mei-trace.o = -I$(srctree)/$(src)
 
 obj-$(CONFIG_INTEL_MEI_HDCP) += hdcp/
 obj-$(CONFIG_INTEL_MEI_PXP) += pxp/

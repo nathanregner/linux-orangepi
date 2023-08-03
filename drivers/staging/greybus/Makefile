@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: GPL-2.0
 # needed for trace events
-ccflags-y += -I$(src)
+ccflags-y += -I$(srctree)/$(src)
 
 # Greybus class drivers
 gb-bootrom-y		:= bootrom.o

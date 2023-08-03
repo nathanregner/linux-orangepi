@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: GPL-2.0
 # For include/trace/define_trace.h to include trace.h
-CFLAGS_regmap.o := -I$(src)
+CFLAGS_regmap.o := -I$(srctree)/$(src)
 
 obj-$(CONFIG_REGMAP) += regmap.o regcache.o
 obj-$(CONFIG_REGMAP) += regcache-rbtree.o regcache-flat.o

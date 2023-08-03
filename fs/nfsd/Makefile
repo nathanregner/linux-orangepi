@@ -3,7 +3,7 @@
 # Makefile for the Linux nfs server
 #
 
-ccflags-y += -I$(src)			# needed for trace events
+ccflags-y += -I$(srctree)/$(src)			# needed for trace events
 
 obj-$(CONFIG_NFSD)	+= nfsd.o
 

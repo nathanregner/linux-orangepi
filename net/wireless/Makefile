@@ -17,7 +17,7 @@ cfg80211-$(CONFIG_OF) += of.o
 cfg80211-$(CONFIG_CFG80211_DEBUGFS) += debugfs.o
 cfg80211-$(CONFIG_CFG80211_WEXT) += wext-compat.o wext-sme.o
 
-CFLAGS_trace.o := -I$(src)
+CFLAGS_trace.o := -I$(srctree)/$(src)
 
 cfg80211-$(CONFIG_CFG80211_USE_KERNEL_REGDB_KEYS) += shipped-certs.o
 ifneq ($(CONFIG_CFG80211_EXTRA_REGDB_KEYDIR),)

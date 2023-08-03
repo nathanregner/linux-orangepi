@@ -16,7 +16,7 @@ greybus-y :=	core.o		\
 obj-$(CONFIG_GREYBUS)		+= greybus.o
 
 # needed for trace events
-ccflags-y += -I$(src)
+ccflags-y += -I$(srctree)/$(src)
 
 # Greybus Host controller drivers
 gb-es2-y := es2.o

@@ -24,4 +24,4 @@ irdma-objs := cm.o        \
               verbs.o     \
               ws.o        \
 
-CFLAGS_trace.o = -I$(src)
+CFLAGS_trace.o = -I$(srctree)/$(src)

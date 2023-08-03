@@ -3,7 +3,7 @@
 # Makefile for the TLS subsystem.
 #
 
-CFLAGS_trace.o := -I$(src)
+CFLAGS_trace.o := -I$(srctree)/$(src)
 
 obj-$(CONFIG_TLS) += tls.o
 

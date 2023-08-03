@@ -61,7 +61,7 @@ endif
 endif
 endif
 
-CFLAGS_trace.o = -I$(src)
+CFLAGS_trace.o = -I$(srctree)/$(src)
 ifdef MVERSION
 CFLAGS_driver.o = -DHFI_DRIVER_VERSION_BASE=\"$(MVERSION)\"
 endif

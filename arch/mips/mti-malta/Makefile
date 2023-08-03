@@ -16,4 +16,4 @@ obj-y				+= malta-time.o
 
 obj-$(CONFIG_MIPS_CMP)		+= malta-amon.o
 
-CFLAGS_malta-dtshim.o = -I$(src)/../../../scripts/dtc/libfdt
+CFLAGS_malta-dtshim.o = -I$(srctree)/$(src)/../../../scripts/dtc/libfdt

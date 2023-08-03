@@ -21,4 +21,4 @@ ath-objs :=	main.o \
 ath-$(CONFIG_ATH_DEBUG) += debug.o
 ath-$(CONFIG_ATH_TRACEPOINTS) += trace.o
 
-CFLAGS_trace.o := -I$(src)
+CFLAGS_trace.o := -I$(srctree)/$(src)

@@ -6,7 +6,7 @@ obj-$(CONFIG_MT7663_USB_SDIO_COMMON) += mt7663-usb-sdio-common.o
 obj-$(CONFIG_MT7663U) += mt7663u.o
 obj-$(CONFIG_MT7663S) += mt7663s.o
 
-CFLAGS_trace.o := -I$(src)
+CFLAGS_trace.o := -I$(srctree)/$(src)
 
 mt7615-common-y := main.o init.o mcu.o eeprom.o mac.o \
 		   debugfs.o trace.o

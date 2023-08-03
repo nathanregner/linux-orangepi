@@ -3,7 +3,7 @@
 # Makefile for the linux kernel.
 #
 
-CFLAGS_armv8_deprecated.o := -I$(src)
+CFLAGS_armv8_deprecated.o := -I$(srctree)/$(src)
 
 CFLAGS_REMOVE_ftrace.o = $(CC_FLAGS_FTRACE)
 CFLAGS_REMOVE_insn.o = $(CC_FLAGS_FTRACE)

@@ -3,6 +3,6 @@ obj-$(CONFIG_IWLMEI)	+= iwlmei.o
 iwlmei-y += main.o
 iwlmei-y += net.o
 iwlmei-$(CONFIG_IWLWIFI_DEVICE_TRACING) += trace.o
-CFLAGS_trace.o := -I$(src)
+CFLAGS_trace.o := -I$(srctree)/$(src)
 
 ccflags-y += -I $(srctree)/$(src)/../

@@ -27,4 +27,4 @@ dccp-$(CONFIG_SYSCTL) += sysctl.o
 dccp_diag-y := diag.o
 
 # build with local directory for trace.h
-CFLAGS_proto.o := -I$(src)
+CFLAGS_proto.o := -I$(srctree)/$(src)

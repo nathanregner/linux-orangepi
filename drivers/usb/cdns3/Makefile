@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-2.0
 # define_trace.h needs to know how to find our header
-CFLAGS_cdns3-trace.o				:= -I$(src)
-CFLAGS_cdnsp-trace.o				:= -I$(src)
+CFLAGS_cdns3-trace.o				:= -I$(srctree)/$(src)
+CFLAGS_cdnsp-trace.o				:= -I$(srctree)/$(src)
 
 cdns-usb-common-y				:= core.o drd.o
 cdns3-y						:= cdns3-plat.o

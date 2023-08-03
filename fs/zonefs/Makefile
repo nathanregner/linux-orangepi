@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: GPL-2.0
-ccflags-y				+= -I$(src)
+ccflags-y				+= -I$(srctree)/$(src)
 
 obj-$(CONFIG_ZONEFS_FS) += zonefs.o
 

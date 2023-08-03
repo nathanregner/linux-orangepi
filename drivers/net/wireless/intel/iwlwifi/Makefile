@@ -26,10 +26,10 @@ iwlwifi-objs += $(iwlwifi-m)
 
 iwlwifi-$(CONFIG_IWLWIFI_DEVICE_TRACING) += iwl-devtrace.o
 
-ccflags-y += -I$(src)
+ccflags-y += -I$(srctree)/$(src)
 
 obj-$(CONFIG_IWLDVM)	+= dvm/
 obj-$(CONFIG_IWLMVM)	+= mvm/
 obj-$(CONFIG_IWLMEI)	+= mei/
 
-CFLAGS_iwl-devtrace.o := -I$(src)
+CFLAGS_iwl-devtrace.o := -I$(srctree)/$(src)

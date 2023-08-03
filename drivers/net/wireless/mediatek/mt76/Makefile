@@ -16,9 +16,9 @@ mt76-$(CONFIG_NL80211_TESTMODE) += testmode.o
 mt76-usb-y := usb.o usb_trace.o
 mt76-sdio-y := sdio.o sdio_txrx.o
 
-CFLAGS_trace.o := -I$(src)
-CFLAGS_usb_trace.o := -I$(src)
-CFLAGS_mt76x02_trace.o := -I$(src)
+CFLAGS_trace.o := -I$(srctree)/$(src)
+CFLAGS_usb_trace.o := -I$(srctree)/$(src)
+CFLAGS_mt76x02_trace.o := -I$(srctree)/$(src)
 
 mt76x02-lib-y := mt76x02_util.o mt76x02_mac.o mt76x02_mcu.o \
 		 mt76x02_eeprom.o mt76x02_phy.o mt76x02_mmio.o \

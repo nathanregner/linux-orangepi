@@ -17,4 +17,4 @@ v3d-$(CONFIG_DEBUG_FS) += v3d_debugfs.o
 
 obj-$(CONFIG_DRM_V3D)  += v3d.o
 
-CFLAGS_v3d_trace_points.o := -I$(src)
+CFLAGS_v3d_trace_points.o := -I$(srctree)/$(src)

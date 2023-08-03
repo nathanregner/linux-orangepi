@@ -1,8 +1,8 @@
 # SPDX-License-Identifier: GPL-2.0
 
 # tell define_trace.h where to find the cros ec trace header
-CFLAGS_cros_ec_trace.o:=		-I$(src)
-CFLAGS_cros_ec_sensorhub_ring.o:=	-I$(src)
+CFLAGS_cros_ec_trace.o:=		-I$(srctree)/$(src)
+CFLAGS_cros_ec_sensorhub_ring.o:=	-I$(srctree)/$(src)
 
 obj-$(CONFIG_CHROMEOS_ACPI)		+= chromeos_acpi.o
 obj-$(CONFIG_CHROMEOS_LAPTOP)		+= chromeos_laptop.o

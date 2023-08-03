@@ -18,4 +18,4 @@ mv88e6xxx-objs += smi.o
 mv88e6xxx-objs += trace.o
 
 # for tracing framework to find trace.h
-CFLAGS_trace.o := -I$(src)
+CFLAGS_trace.o := -I$(srctree)/$(src)

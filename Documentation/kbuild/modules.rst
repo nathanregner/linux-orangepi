@@ -391,8 +391,8 @@ according to the following rule:
 		complex-y := src/complex_main.o
 		complex-y += src/hal/hardwareif.o
 
-		ccflags-y := -I$(src)/include
-		ccflags-y += -I$(src)/src/hal/include
+		ccflags-y := -I$(srctree)/$(src)/include
+		ccflags-y += -I$(srctree)/$(src)/src/hal/include
 
 	As you can see, kbuild knows how to handle object files located
 	in other directories. The trick is to specify the directory

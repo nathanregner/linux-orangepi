@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: GPL-2.0
 # To find a header included by define_trace.h.
-CFLAGS_amdtp-stream.o	:= -I$(src)
+CFLAGS_amdtp-stream.o	:= -I$(srctree)/$(src)
 
 snd-firewire-lib-objs := lib.o iso-resources.o packets-buffer.o \
 			 fcp.o cmp.o amdtp-stream.o amdtp-am824.o

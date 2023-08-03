@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
 # Necessary for CREATE_TRACE_POINTS
-CFLAGS_debug.o = -I$(src)
+CFLAGS_debug.o = -I$(srctree)/$(src)
 
 wfx-y := \
 	bh.o \
