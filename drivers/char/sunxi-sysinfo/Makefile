@@ -3,3 +3,5 @@
 #
 
 obj-$(CONFIG_SUNXI_SYS_INFO) += sunxi-sysinfo.o
+
+ccflags-y += -Wno-incompatible-pointer-types-discards-qualifiers

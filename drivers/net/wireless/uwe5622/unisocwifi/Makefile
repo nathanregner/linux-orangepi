@@ -1,6 +1,7 @@
 PWD := $(shell pwd)
 all_dependencies := driver
 
+ccflags-y += -Wno-incompatible-pointer-types-discards-qualifiers
 
 ifneq ($(UNISOC_BSP_INCLUDE),)
 ccflags-y += -I$(UNISOC_BSP_INCLUDE)
