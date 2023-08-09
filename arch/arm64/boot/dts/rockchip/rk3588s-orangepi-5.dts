@@ -1096,11 +1096,11 @@
 	status = "okay";
 };
 
-&usbdrd3_0 {
+&usb_host2_xhci {
 	status = "okay";
 };
 
-&usbdrd_dwc3_0 {
+&usb_host0_xhci {
 	status = "okay";
 	dr_mode = "otg";
 	usb-role-switch;
@@ -1114,12 +1114,12 @@
 	};
 };
 
-&usbhost3_0 {
+&usb_host2_xhci {
 	dr_mode = "host";
 	status = "okay";
 };
 
-&usbhost_dwc3_0 {
+&usb_host2_xhci {
 	status = "okay";
 };
 
