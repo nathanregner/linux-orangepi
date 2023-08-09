@@ -13,7 +13,7 @@
 #include <dt-bindings/thermal/thermal.h>
 
 / {
-	compatible = "rockchip,rk3588";
+	compatible = "rockchip,rk3588s", "rockchip,rk3588";
 
 	interrupt-parent = <&gic>;
 	#address-cells = <2>;
@@ -980,6 +980,7 @@
 			clock-names = "phyclk";
 			clock-output-names = "usb480m_phy0";
 			#clock-cells = <0>;
+			rockchip,usbctrl-grf = <&usb_grf>;
 			status = "disabled";
 
 			u2phy0_otg: otg-port {
@@ -2003,7 +2004,7 @@
 		clock-names = "core", "bus", "axi", "block", "timer";
 		max-frequency = <200000000>;
 		pinctrl-0 = <&emmc_rstnout>, <&emmc_bus8>, <&emmc_clk>,
-			    <&emmc_cmd>, <&emmc_data_strobe>;
+				<&emmc_cmd>, <&emmc_data_strobe>;
 		pinctrl-names = "default";
 		resets = <&cru SRST_C_EMMC>, <&cru SRST_H_EMMC>,
 			 <&cru SRST_A_EMMC>, <&cru SRST_B_EMMC>,
@@ -2242,7 +2243,7 @@
 		clocks = <&cru PCLK_BUSTIMER0>, <&cru CLK_BUSTIMER0>;
 		clock-names = "pclk", "timer";
 	};
-
+	
 	wdt: watchdog@feaf0000 {
 		compatible = "rockchip,rk3588-wdt", "snps,dw-wdt";
 		reg = <0x0 0xfeaf0000 0x0 0x100>;
@@ -2884,6 +2885,19 @@
 		resets = <&cru SRST_A_AV1>, <&cru SRST_P_AV1>, <&cru SRST_A_AV1_BIU>, <&cru SRST_P_AV1_BIU>;
 		power-domains = <&power RK3588_PD_AV1>;
 		status = "okay";
+	};
+
+	sfc: spi@fe2b0000 {
+		compatible = "rockchip,sfc";
+		reg = <0x0 0xfe2b0000 0x0 0x4000>;
+		interrupts = <GIC_SPI 206 IRQ_TYPE_LEVEL_HIGH 0>;
+		clocks = <&cru SCLK_SFC>, <&cru HCLK_SFC>;
+		clock-names = "clk_sfc", "hclk_sfc";
+		assigned-clocks = <&cru SCLK_SFC>;
+		assigned-clock-rates = <100000000>;
+		#address-cells = <1>;
+		#size-cells = <0>;
+		status = "disabled";
 	};
 };
 
